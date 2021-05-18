@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.7
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frame.ServiceLayer", "Frame.ServiceLayer\Frame.ServiceLayer.csproj", "{D5E513A5-D566-41CF-A344-2BC03CD1649B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teste", "Teste\Teste.csproj", "{35128539-F118-470F-95AF-EFC415882B22}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D5E513A5-D566-41CF-A344-2BC03CD1649B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5E513A5-D566-41CF-A344-2BC03CD1649B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5E513A5-D566-41CF-A344-2BC03CD1649B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D5E513A5-D566-41CF-A344-2BC03CD1649B}.Debug|x64.Build.0 = Debug|Any CPU
+		{D5E513A5-D566-41CF-A344-2BC03CD1649B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5E513A5-D566-41CF-A344-2BC03CD1649B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5E513A5-D566-41CF-A344-2BC03CD1649B}.Release|x64.ActiveCfg = Release|Any CPU
+		{D5E513A5-D566-41CF-A344-2BC03CD1649B}.Release|x64.Build.0 = Release|Any CPU
+		{35128539-F118-470F-95AF-EFC415882B22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35128539-F118-470F-95AF-EFC415882B22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35128539-F118-470F-95AF-EFC415882B22}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{35128539-F118-470F-95AF-EFC415882B22}.Debug|x64.Build.0 = Debug|Any CPU
+		{35128539-F118-470F-95AF-EFC415882B22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35128539-F118-470F-95AF-EFC415882B22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35128539-F118-470F-95AF-EFC415882B22}.Release|x64.ActiveCfg = Release|Any CPU
+		{35128539-F118-470F-95AF-EFC415882B22}.Release|x64.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D4DA1E22-C087-478D-82F3-26DA4C0055A0}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://dev.azure.com/neocantra
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Frame.ServiceLayer\\Frame.ServiceLayer.csproj
+		SccProjectName1 = Frame.ServiceLayer
+		SccLocalPath1 = Frame.ServiceLayer
+		SccProjectUniqueName2 = Teste\\Teste.csproj
+		SccProjectName2 = Teste
+		SccLocalPath2 = Teste
+	EndGlobalSection
+EndGlobal

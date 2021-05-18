@@ -1,0 +1,4237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GerarToken">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="codigoEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GerarTokenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GerarTokenResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Localiza">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="documento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LocalizaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LocalizaResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CadastroSimplesPF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="documento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CadastroSimplesPFResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CadastroSimplesPFResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CadastroSimplesPJ">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="documento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CadastroSimplesPJResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CadastroSimplesPJResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CadastroSintetico">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="documento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CadastroSinteticoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CadastroSinteticoResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CadastroCompletoPF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="documento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CadastroCompletoPFResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CadastroCompletoPFResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CadastroCompletoPJ">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="documento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CadastroCompletoPJResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CadastroCompletoPJResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PessoasLigadas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="documento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PessoasLigadasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PessoasLigadasResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceitaFederalPFOnline">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="documento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dataNascimento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceitaFederalPFOnlineResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReceitaFederalPFOnlineResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceitaFederalPFBD">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="documento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dataNascimento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceitaFederalPFBDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReceitaFederalPFBDResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceitaFederalPJOnline">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="documento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceitaFederalPJOnlineResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReceitaFederalPJOnlineResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceitaFederalPJBD">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="documento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceitaFederalPJBDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReceitaFederalPJBDResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceitaSintegraOnline">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="documento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceitaSintegraOnlineResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReceitaSintegraOnlineResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SintegraOnline">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="documento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="uf" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SintegraOnlineResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SintegraOnlineResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidacaoFiscal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="documento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidacaoFiscalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidacaoFiscalResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Veiculo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="placa" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VeiculoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VeiculoResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VeiculoSimples">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="placa" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VeiculoSimplesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VeiculoSimplesResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObitoSimples">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="documento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObitoSimplesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObitoSimplesResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GroupPJ">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="documento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GroupPJResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GroupPJResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SimplesNacional">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="documento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SimplesNacionalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SimplesNacionalResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Protesto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="documento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProtestoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProtestoResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QSA">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="documento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QSAResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QSAResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscaCEP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cep" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscaCEPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscaCEPResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscaCepPorLogradouro">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cidade" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="logradouro" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscaCepPorLogradouroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscaCepPorLogradouroResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RestricaoS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="documento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RestricaoSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RestricaoSResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Relatorio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dataInicio" nillable="true" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="dataFinal" nillable="true" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RelatorioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RelatorioResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ANP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="documento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ANPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ANPResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaFGTSEmpregador">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="documento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaFGTSEmpregadorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaFGTSEmpregadorResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Score">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="documento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ScoreResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ScoreResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IRPF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="documento" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="exercicio" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IRPFResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IRPFResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CARF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="documento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CARFResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CARFResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaTSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="documento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaTSEResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaTSEResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CCF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="documento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CCFResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CCFResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceitaFederalComCaptcha">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cpf" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dataNascimento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="captcha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceitaFederalComCaptchaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReceitaFederalComCaptchaResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MandadoPrisao">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nome" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dataNascimento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nomeMae" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MandadoPrisaoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MandadoPrisaoResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PEP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="documento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PEPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PEPResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AcoesJudiciais">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="documento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AcoesJudiciaisResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AcoesJudiciaisResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SugereGEO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="documento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cep" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SugereGEOResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SugereGEOResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="JusBrasilPF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="documento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="JusBrasilPFResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="JusBrasilPFResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BACEN">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cnpj" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="unidade" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dependencia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="operador" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mes" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ano" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BACENResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BACENResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CEPIM">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="documento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CEPIMResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CEPIMResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CEIS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="documento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CEISResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CEISResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CNEP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="documento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CNEPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CNEPResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PETI">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="documento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PETIResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PETIResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AcordoLeniencia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="documento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AcordoLenienciaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AcordoLenienciaResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CEAF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="documento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CEAFResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CEAFResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DividaAtivaSP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="documento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DividaAtivaSPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DividaAtivaSPResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GerarTokenSoapIn">
+    <wsdl:part name="parameters" element="tns:GerarToken" />
+  </wsdl:message>
+  <wsdl:message name="GerarTokenSoapOut">
+    <wsdl:part name="parameters" element="tns:GerarTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="LocalizaSoapIn">
+    <wsdl:part name="parameters" element="tns:Localiza" />
+  </wsdl:message>
+  <wsdl:message name="LocalizaSoapOut">
+    <wsdl:part name="parameters" element="tns:LocalizaResponse" />
+  </wsdl:message>
+  <wsdl:message name="CadastroSimplesPFSoapIn">
+    <wsdl:part name="parameters" element="tns:CadastroSimplesPF" />
+  </wsdl:message>
+  <wsdl:message name="CadastroSimplesPFSoapOut">
+    <wsdl:part name="parameters" element="tns:CadastroSimplesPFResponse" />
+  </wsdl:message>
+  <wsdl:message name="CadastroSimplesPJSoapIn">
+    <wsdl:part name="parameters" element="tns:CadastroSimplesPJ" />
+  </wsdl:message>
+  <wsdl:message name="CadastroSimplesPJSoapOut">
+    <wsdl:part name="parameters" element="tns:CadastroSimplesPJResponse" />
+  </wsdl:message>
+  <wsdl:message name="CadastroSinteticoSoapIn">
+    <wsdl:part name="parameters" element="tns:CadastroSintetico" />
+  </wsdl:message>
+  <wsdl:message name="CadastroSinteticoSoapOut">
+    <wsdl:part name="parameters" element="tns:CadastroSinteticoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CadastroCompletoPFSoapIn">
+    <wsdl:part name="parameters" element="tns:CadastroCompletoPF" />
+  </wsdl:message>
+  <wsdl:message name="CadastroCompletoPFSoapOut">
+    <wsdl:part name="parameters" element="tns:CadastroCompletoPFResponse" />
+  </wsdl:message>
+  <wsdl:message name="CadastroCompletoPJSoapIn">
+    <wsdl:part name="parameters" element="tns:CadastroCompletoPJ" />
+  </wsdl:message>
+  <wsdl:message name="CadastroCompletoPJSoapOut">
+    <wsdl:part name="parameters" element="tns:CadastroCompletoPJResponse" />
+  </wsdl:message>
+  <wsdl:message name="PessoasLigadasSoapIn">
+    <wsdl:part name="parameters" element="tns:PessoasLigadas" />
+  </wsdl:message>
+  <wsdl:message name="PessoasLigadasSoapOut">
+    <wsdl:part name="parameters" element="tns:PessoasLigadasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReceitaFederalPFOnlineSoapIn">
+    <wsdl:part name="parameters" element="tns:ReceitaFederalPFOnline" />
+  </wsdl:message>
+  <wsdl:message name="ReceitaFederalPFOnlineSoapOut">
+    <wsdl:part name="parameters" element="tns:ReceitaFederalPFOnlineResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReceitaFederalPFBDSoapIn">
+    <wsdl:part name="parameters" element="tns:ReceitaFederalPFBD" />
+  </wsdl:message>
+  <wsdl:message name="ReceitaFederalPFBDSoapOut">
+    <wsdl:part name="parameters" element="tns:ReceitaFederalPFBDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReceitaFederalPJOnlineSoapIn">
+    <wsdl:part name="parameters" element="tns:ReceitaFederalPJOnline" />
+  </wsdl:message>
+  <wsdl:message name="ReceitaFederalPJOnlineSoapOut">
+    <wsdl:part name="parameters" element="tns:ReceitaFederalPJOnlineResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReceitaFederalPJBDSoapIn">
+    <wsdl:part name="parameters" element="tns:ReceitaFederalPJBD" />
+  </wsdl:message>
+  <wsdl:message name="ReceitaFederalPJBDSoapOut">
+    <wsdl:part name="parameters" element="tns:ReceitaFederalPJBDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReceitaSintegraOnlineSoapIn">
+    <wsdl:part name="parameters" element="tns:ReceitaSintegraOnline" />
+  </wsdl:message>
+  <wsdl:message name="ReceitaSintegraOnlineSoapOut">
+    <wsdl:part name="parameters" element="tns:ReceitaSintegraOnlineResponse" />
+  </wsdl:message>
+  <wsdl:message name="SintegraOnlineSoapIn">
+    <wsdl:part name="parameters" element="tns:SintegraOnline" />
+  </wsdl:message>
+  <wsdl:message name="SintegraOnlineSoapOut">
+    <wsdl:part name="parameters" element="tns:SintegraOnlineResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidacaoFiscalSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidacaoFiscal" />
+  </wsdl:message>
+  <wsdl:message name="ValidacaoFiscalSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidacaoFiscalResponse" />
+  </wsdl:message>
+  <wsdl:message name="VeiculoSoapIn">
+    <wsdl:part name="parameters" element="tns:Veiculo" />
+  </wsdl:message>
+  <wsdl:message name="VeiculoSoapOut">
+    <wsdl:part name="parameters" element="tns:VeiculoResponse" />
+  </wsdl:message>
+  <wsdl:message name="VeiculoSimplesSoapIn">
+    <wsdl:part name="parameters" element="tns:VeiculoSimples" />
+  </wsdl:message>
+  <wsdl:message name="VeiculoSimplesSoapOut">
+    <wsdl:part name="parameters" element="tns:VeiculoSimplesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObitoSimplesSoapIn">
+    <wsdl:part name="parameters" element="tns:ObitoSimples" />
+  </wsdl:message>
+  <wsdl:message name="ObitoSimplesSoapOut">
+    <wsdl:part name="parameters" element="tns:ObitoSimplesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GroupPJSoapIn">
+    <wsdl:part name="parameters" element="tns:GroupPJ" />
+  </wsdl:message>
+  <wsdl:message name="GroupPJSoapOut">
+    <wsdl:part name="parameters" element="tns:GroupPJResponse" />
+  </wsdl:message>
+  <wsdl:message name="SimplesNacionalSoapIn">
+    <wsdl:part name="parameters" element="tns:SimplesNacional" />
+  </wsdl:message>
+  <wsdl:message name="SimplesNacionalSoapOut">
+    <wsdl:part name="parameters" element="tns:SimplesNacionalResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProtestoSoapIn">
+    <wsdl:part name="parameters" element="tns:Protesto" />
+  </wsdl:message>
+  <wsdl:message name="ProtestoSoapOut">
+    <wsdl:part name="parameters" element="tns:ProtestoResponse" />
+  </wsdl:message>
+  <wsdl:message name="QSASoapIn">
+    <wsdl:part name="parameters" element="tns:QSA" />
+  </wsdl:message>
+  <wsdl:message name="QSASoapOut">
+    <wsdl:part name="parameters" element="tns:QSAResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscaCEPSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscaCEP" />
+  </wsdl:message>
+  <wsdl:message name="BuscaCEPSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscaCEPResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscaCepPorLogradouroSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscaCepPorLogradouro" />
+  </wsdl:message>
+  <wsdl:message name="BuscaCepPorLogradouroSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscaCepPorLogradouroResponse" />
+  </wsdl:message>
+  <wsdl:message name="RestricaoSSoapIn">
+    <wsdl:part name="parameters" element="tns:RestricaoS" />
+  </wsdl:message>
+  <wsdl:message name="RestricaoSSoapOut">
+    <wsdl:part name="parameters" element="tns:RestricaoSResponse" />
+  </wsdl:message>
+  <wsdl:message name="RelatorioSoapIn">
+    <wsdl:part name="parameters" element="tns:Relatorio" />
+  </wsdl:message>
+  <wsdl:message name="RelatorioSoapOut">
+    <wsdl:part name="parameters" element="tns:RelatorioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ANPSoapIn">
+    <wsdl:part name="parameters" element="tns:ANP" />
+  </wsdl:message>
+  <wsdl:message name="ANPSoapOut">
+    <wsdl:part name="parameters" element="tns:ANPResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaFGTSEmpregadorSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaFGTSEmpregador" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaFGTSEmpregadorSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaFGTSEmpregadorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ScoreSoapIn">
+    <wsdl:part name="parameters" element="tns:Score" />
+  </wsdl:message>
+  <wsdl:message name="ScoreSoapOut">
+    <wsdl:part name="parameters" element="tns:ScoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRPFSoapIn">
+    <wsdl:part name="parameters" element="tns:IRPF" />
+  </wsdl:message>
+  <wsdl:message name="IRPFSoapOut">
+    <wsdl:part name="parameters" element="tns:IRPFResponse" />
+  </wsdl:message>
+  <wsdl:message name="CARFSoapIn">
+    <wsdl:part name="parameters" element="tns:CARF" />
+  </wsdl:message>
+  <wsdl:message name="CARFSoapOut">
+    <wsdl:part name="parameters" element="tns:CARFResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaTSESoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaTSE" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaTSESoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaTSEResponse" />
+  </wsdl:message>
+  <wsdl:message name="CCFSoapIn">
+    <wsdl:part name="parameters" element="tns:CCF" />
+  </wsdl:message>
+  <wsdl:message name="CCFSoapOut">
+    <wsdl:part name="parameters" element="tns:CCFResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReceitaFederalComCaptchaSoapIn">
+    <wsdl:part name="parameters" element="tns:ReceitaFederalComCaptcha" />
+  </wsdl:message>
+  <wsdl:message name="ReceitaFederalComCaptchaSoapOut">
+    <wsdl:part name="parameters" element="tns:ReceitaFederalComCaptchaResponse" />
+  </wsdl:message>
+  <wsdl:message name="MandadoPrisaoSoapIn">
+    <wsdl:part name="parameters" element="tns:MandadoPrisao" />
+  </wsdl:message>
+  <wsdl:message name="MandadoPrisaoSoapOut">
+    <wsdl:part name="parameters" element="tns:MandadoPrisaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="PEPSoapIn">
+    <wsdl:part name="parameters" element="tns:PEP" />
+  </wsdl:message>
+  <wsdl:message name="PEPSoapOut">
+    <wsdl:part name="parameters" element="tns:PEPResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcoesJudiciaisSoapIn">
+    <wsdl:part name="parameters" element="tns:AcoesJudiciais" />
+  </wsdl:message>
+  <wsdl:message name="AcoesJudiciaisSoapOut">
+    <wsdl:part name="parameters" element="tns:AcoesJudiciaisResponse" />
+  </wsdl:message>
+  <wsdl:message name="SugereGEOSoapIn">
+    <wsdl:part name="parameters" element="tns:SugereGEO" />
+  </wsdl:message>
+  <wsdl:message name="SugereGEOSoapOut">
+    <wsdl:part name="parameters" element="tns:SugereGEOResponse" />
+  </wsdl:message>
+  <wsdl:message name="JusBrasilPFSoapIn">
+    <wsdl:part name="parameters" element="tns:JusBrasilPF" />
+  </wsdl:message>
+  <wsdl:message name="JusBrasilPFSoapOut">
+    <wsdl:part name="parameters" element="tns:JusBrasilPFResponse" />
+  </wsdl:message>
+  <wsdl:message name="BACENSoapIn">
+    <wsdl:part name="parameters" element="tns:BACEN" />
+  </wsdl:message>
+  <wsdl:message name="BACENSoapOut">
+    <wsdl:part name="parameters" element="tns:BACENResponse" />
+  </wsdl:message>
+  <wsdl:message name="CEPIMSoapIn">
+    <wsdl:part name="parameters" element="tns:CEPIM" />
+  </wsdl:message>
+  <wsdl:message name="CEPIMSoapOut">
+    <wsdl:part name="parameters" element="tns:CEPIMResponse" />
+  </wsdl:message>
+  <wsdl:message name="CEISSoapIn">
+    <wsdl:part name="parameters" element="tns:CEIS" />
+  </wsdl:message>
+  <wsdl:message name="CEISSoapOut">
+    <wsdl:part name="parameters" element="tns:CEISResponse" />
+  </wsdl:message>
+  <wsdl:message name="CNEPSoapIn">
+    <wsdl:part name="parameters" element="tns:CNEP" />
+  </wsdl:message>
+  <wsdl:message name="CNEPSoapOut">
+    <wsdl:part name="parameters" element="tns:CNEPResponse" />
+  </wsdl:message>
+  <wsdl:message name="PETISoapIn">
+    <wsdl:part name="parameters" element="tns:PETI" />
+  </wsdl:message>
+  <wsdl:message name="PETISoapOut">
+    <wsdl:part name="parameters" element="tns:PETIResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcordoLenienciaSoapIn">
+    <wsdl:part name="parameters" element="tns:AcordoLeniencia" />
+  </wsdl:message>
+  <wsdl:message name="AcordoLenienciaSoapOut">
+    <wsdl:part name="parameters" element="tns:AcordoLenienciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="CEAFSoapIn">
+    <wsdl:part name="parameters" element="tns:CEAF" />
+  </wsdl:message>
+  <wsdl:message name="CEAFSoapOut">
+    <wsdl:part name="parameters" element="tns:CEAFResponse" />
+  </wsdl:message>
+  <wsdl:message name="DividaAtivaSPSoapIn">
+    <wsdl:part name="parameters" element="tns:DividaAtivaSP" />
+  </wsdl:message>
+  <wsdl:message name="DividaAtivaSPSoapOut">
+    <wsdl:part name="parameters" element="tns:DividaAtivaSPResponse" />
+  </wsdl:message>
+  <wsdl:message name="GerarTokenHttpGetIn">
+    <wsdl:part name="codigoEmpresa" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="senha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GerarTokenHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="LocalizaHttpGetIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LocalizaHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="CadastroSimplesPFHttpGetIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CadastroSimplesPFHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="CadastroSimplesPJHttpGetIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CadastroSimplesPJHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="CadastroSinteticoHttpGetIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CadastroSinteticoHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="CadastroCompletoPFHttpGetIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CadastroCompletoPFHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="CadastroCompletoPJHttpGetIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CadastroCompletoPJHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="PessoasLigadasHttpGetIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PessoasLigadasHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ReceitaFederalPFOnlineHttpGetIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+    <wsdl:part name="dataNascimento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ReceitaFederalPFOnlineHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ReceitaFederalPFBDHttpGetIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+    <wsdl:part name="dataNascimento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ReceitaFederalPFBDHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ReceitaFederalPJOnlineHttpGetIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ReceitaFederalPJOnlineHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ReceitaFederalPJBDHttpGetIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ReceitaFederalPJBDHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ReceitaSintegraOnlineHttpGetIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ReceitaSintegraOnlineHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="SintegraOnlineHttpGetIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+    <wsdl:part name="uf" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SintegraOnlineHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ValidacaoFiscalHttpGetIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ValidacaoFiscalHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="VeiculoHttpGetIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="placa" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="VeiculoHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="VeiculoSimplesHttpGetIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="placa" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="VeiculoSimplesHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ObitoSimplesHttpGetIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ObitoSimplesHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="GroupPJHttpGetIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GroupPJHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="SimplesNacionalHttpGetIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SimplesNacionalHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ProtestoHttpGetIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ProtestoHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="QSAHttpGetIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QSAHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="BuscaCEPHttpGetIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="cep" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BuscaCEPHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="BuscaCepPorLogradouroHttpGetIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="estado" type="s:string" />
+    <wsdl:part name="cidade" type="s:string" />
+    <wsdl:part name="logradouro" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BuscaCepPorLogradouroHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="RestricaoSHttpGetIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RestricaoSHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ANPHttpGetIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ANPHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaFGTSEmpregadorHttpGetIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaFGTSEmpregadorHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ScoreHttpGetIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ScoreHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="IRPFHttpGetIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+    <wsdl:part name="exercicio" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="IRPFHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="CARFHttpGetIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CARFHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaTSEHttpGetIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaTSEHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="CCFHttpGetIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CCFHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ReceitaFederalComCaptchaHttpGetIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="cpf" type="s:string" />
+    <wsdl:part name="dataNascimento" type="s:string" />
+    <wsdl:part name="captcha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ReceitaFederalComCaptchaHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="MandadoPrisaoHttpGetIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="nome" type="s:string" />
+    <wsdl:part name="dataNascimento" type="s:string" />
+    <wsdl:part name="nomeMae" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="MandadoPrisaoHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="PEPHttpGetIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PEPHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="AcoesJudiciaisHttpGetIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AcoesJudiciaisHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="SugereGEOHttpGetIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+    <wsdl:part name="cep" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SugereGEOHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="JusBrasilPFHttpGetIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="JusBrasilPFHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="BACENHttpGetIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="cnpj" type="s:string" />
+    <wsdl:part name="unidade" type="s:string" />
+    <wsdl:part name="dependencia" type="s:string" />
+    <wsdl:part name="operador" type="s:string" />
+    <wsdl:part name="mes" type="s:string" />
+    <wsdl:part name="ano" type="s:string" />
+    <wsdl:part name="senha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BACENHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="CEPIMHttpGetIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CEPIMHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="CEISHttpGetIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CEISHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="CNEPHttpGetIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CNEPHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="PETIHttpGetIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PETIHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="AcordoLenienciaHttpGetIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AcordoLenienciaHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="CEAFHttpGetIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CEAFHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="DividaAtivaSPHttpGetIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DividaAtivaSPHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="GerarTokenHttpPostIn">
+    <wsdl:part name="codigoEmpresa" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="senha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GerarTokenHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="LocalizaHttpPostIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LocalizaHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="CadastroSimplesPFHttpPostIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CadastroSimplesPFHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="CadastroSimplesPJHttpPostIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CadastroSimplesPJHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="CadastroSinteticoHttpPostIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CadastroSinteticoHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="CadastroCompletoPFHttpPostIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CadastroCompletoPFHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="CadastroCompletoPJHttpPostIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CadastroCompletoPJHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="PessoasLigadasHttpPostIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PessoasLigadasHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ReceitaFederalPFOnlineHttpPostIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+    <wsdl:part name="dataNascimento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ReceitaFederalPFOnlineHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ReceitaFederalPFBDHttpPostIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+    <wsdl:part name="dataNascimento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ReceitaFederalPFBDHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ReceitaFederalPJOnlineHttpPostIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ReceitaFederalPJOnlineHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ReceitaFederalPJBDHttpPostIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ReceitaFederalPJBDHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ReceitaSintegraOnlineHttpPostIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ReceitaSintegraOnlineHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="SintegraOnlineHttpPostIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+    <wsdl:part name="uf" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SintegraOnlineHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ValidacaoFiscalHttpPostIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ValidacaoFiscalHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="VeiculoHttpPostIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="placa" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="VeiculoHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="VeiculoSimplesHttpPostIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="placa" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="VeiculoSimplesHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ObitoSimplesHttpPostIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ObitoSimplesHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="GroupPJHttpPostIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GroupPJHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="SimplesNacionalHttpPostIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SimplesNacionalHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ProtestoHttpPostIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ProtestoHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="QSAHttpPostIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QSAHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="BuscaCEPHttpPostIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="cep" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BuscaCEPHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="BuscaCepPorLogradouroHttpPostIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="estado" type="s:string" />
+    <wsdl:part name="cidade" type="s:string" />
+    <wsdl:part name="logradouro" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BuscaCepPorLogradouroHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="RestricaoSHttpPostIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RestricaoSHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ANPHttpPostIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ANPHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaFGTSEmpregadorHttpPostIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaFGTSEmpregadorHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ScoreHttpPostIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ScoreHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="IRPFHttpPostIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+    <wsdl:part name="exercicio" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="IRPFHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="CARFHttpPostIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CARFHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaTSEHttpPostIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaTSEHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="CCFHttpPostIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CCFHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ReceitaFederalComCaptchaHttpPostIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="cpf" type="s:string" />
+    <wsdl:part name="dataNascimento" type="s:string" />
+    <wsdl:part name="captcha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ReceitaFederalComCaptchaHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="MandadoPrisaoHttpPostIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="nome" type="s:string" />
+    <wsdl:part name="dataNascimento" type="s:string" />
+    <wsdl:part name="nomeMae" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="MandadoPrisaoHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="PEPHttpPostIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PEPHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="AcoesJudiciaisHttpPostIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AcoesJudiciaisHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="SugereGEOHttpPostIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+    <wsdl:part name="cep" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SugereGEOHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="JusBrasilPFHttpPostIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="JusBrasilPFHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="BACENHttpPostIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="cnpj" type="s:string" />
+    <wsdl:part name="unidade" type="s:string" />
+    <wsdl:part name="dependencia" type="s:string" />
+    <wsdl:part name="operador" type="s:string" />
+    <wsdl:part name="mes" type="s:string" />
+    <wsdl:part name="ano" type="s:string" />
+    <wsdl:part name="senha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BACENHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="CEPIMHttpPostIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CEPIMHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="CEISHttpPostIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CEISHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="CNEPHttpPostIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CNEPHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="PETIHttpPostIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PETIHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="AcordoLenienciaHttpPostIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AcordoLenienciaHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="CEAFHttpPostIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CEAFHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="DividaAtivaSPHttpPostIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="documento" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DividaAtivaSPHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:portType name="WsSoap">
+    <wsdl:operation name="GerarToken">
+      <wsdl:input message="tns:GerarTokenSoapIn" />
+      <wsdl:output message="tns:GerarTokenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Localiza">
+      <wsdl:input message="tns:LocalizaSoapIn" />
+      <wsdl:output message="tns:LocalizaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CadastroSimplesPF">
+      <wsdl:input message="tns:CadastroSimplesPFSoapIn" />
+      <wsdl:output message="tns:CadastroSimplesPFSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CadastroSimplesPJ">
+      <wsdl:input message="tns:CadastroSimplesPJSoapIn" />
+      <wsdl:output message="tns:CadastroSimplesPJSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CadastroSintetico">
+      <wsdl:input message="tns:CadastroSinteticoSoapIn" />
+      <wsdl:output message="tns:CadastroSinteticoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CadastroCompletoPF">
+      <wsdl:input message="tns:CadastroCompletoPFSoapIn" />
+      <wsdl:output message="tns:CadastroCompletoPFSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CadastroCompletoPJ">
+      <wsdl:input message="tns:CadastroCompletoPJSoapIn" />
+      <wsdl:output message="tns:CadastroCompletoPJSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PessoasLigadas">
+      <wsdl:input message="tns:PessoasLigadasSoapIn" />
+      <wsdl:output message="tns:PessoasLigadasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReceitaFederalPFOnline">
+      <wsdl:input message="tns:ReceitaFederalPFOnlineSoapIn" />
+      <wsdl:output message="tns:ReceitaFederalPFOnlineSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReceitaFederalPFBD">
+      <wsdl:input message="tns:ReceitaFederalPFBDSoapIn" />
+      <wsdl:output message="tns:ReceitaFederalPFBDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReceitaFederalPJOnline">
+      <wsdl:input message="tns:ReceitaFederalPJOnlineSoapIn" />
+      <wsdl:output message="tns:ReceitaFederalPJOnlineSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReceitaFederalPJBD">
+      <wsdl:input message="tns:ReceitaFederalPJBDSoapIn" />
+      <wsdl:output message="tns:ReceitaFederalPJBDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReceitaSintegraOnline">
+      <wsdl:input message="tns:ReceitaSintegraOnlineSoapIn" />
+      <wsdl:output message="tns:ReceitaSintegraOnlineSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SintegraOnline">
+      <wsdl:input message="tns:SintegraOnlineSoapIn" />
+      <wsdl:output message="tns:SintegraOnlineSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidacaoFiscal">
+      <wsdl:input message="tns:ValidacaoFiscalSoapIn" />
+      <wsdl:output message="tns:ValidacaoFiscalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Veiculo">
+      <wsdl:input message="tns:VeiculoSoapIn" />
+      <wsdl:output message="tns:VeiculoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VeiculoSimples">
+      <wsdl:input message="tns:VeiculoSimplesSoapIn" />
+      <wsdl:output message="tns:VeiculoSimplesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObitoSimples">
+      <wsdl:input message="tns:ObitoSimplesSoapIn" />
+      <wsdl:output message="tns:ObitoSimplesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GroupPJ">
+      <wsdl:input message="tns:GroupPJSoapIn" />
+      <wsdl:output message="tns:GroupPJSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SimplesNacional">
+      <wsdl:input message="tns:SimplesNacionalSoapIn" />
+      <wsdl:output message="tns:SimplesNacionalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Protesto">
+      <wsdl:input message="tns:ProtestoSoapIn" />
+      <wsdl:output message="tns:ProtestoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QSA">
+      <wsdl:input message="tns:QSASoapIn" />
+      <wsdl:output message="tns:QSASoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscaCEP">
+      <wsdl:input message="tns:BuscaCEPSoapIn" />
+      <wsdl:output message="tns:BuscaCEPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscaCepPorLogradouro">
+      <wsdl:input message="tns:BuscaCepPorLogradouroSoapIn" />
+      <wsdl:output message="tns:BuscaCepPorLogradouroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RestricaoS">
+      <wsdl:input message="tns:RestricaoSSoapIn" />
+      <wsdl:output message="tns:RestricaoSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Relatorio">
+      <wsdl:input message="tns:RelatorioSoapIn" />
+      <wsdl:output message="tns:RelatorioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ANP">
+      <wsdl:input message="tns:ANPSoapIn" />
+      <wsdl:output message="tns:ANPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaFGTSEmpregador">
+      <wsdl:input message="tns:ConsultaFGTSEmpregadorSoapIn" />
+      <wsdl:output message="tns:ConsultaFGTSEmpregadorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Score">
+      <wsdl:input message="tns:ScoreSoapIn" />
+      <wsdl:output message="tns:ScoreSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IRPF">
+      <wsdl:input message="tns:IRPFSoapIn" />
+      <wsdl:output message="tns:IRPFSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CARF">
+      <wsdl:input message="tns:CARFSoapIn" />
+      <wsdl:output message="tns:CARFSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaTSE">
+      <wsdl:input message="tns:ConsultaTSESoapIn" />
+      <wsdl:output message="tns:ConsultaTSESoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CCF">
+      <wsdl:input message="tns:CCFSoapIn" />
+      <wsdl:output message="tns:CCFSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReceitaFederalComCaptcha">
+      <wsdl:input message="tns:ReceitaFederalComCaptchaSoapIn" />
+      <wsdl:output message="tns:ReceitaFederalComCaptchaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MandadoPrisao">
+      <wsdl:input message="tns:MandadoPrisaoSoapIn" />
+      <wsdl:output message="tns:MandadoPrisaoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PEP">
+      <wsdl:input message="tns:PEPSoapIn" />
+      <wsdl:output message="tns:PEPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AcoesJudiciais">
+      <wsdl:input message="tns:AcoesJudiciaisSoapIn" />
+      <wsdl:output message="tns:AcoesJudiciaisSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SugereGEO">
+      <wsdl:input message="tns:SugereGEOSoapIn" />
+      <wsdl:output message="tns:SugereGEOSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="JusBrasilPF">
+      <wsdl:input message="tns:JusBrasilPFSoapIn" />
+      <wsdl:output message="tns:JusBrasilPFSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BACEN">
+      <wsdl:input message="tns:BACENSoapIn" />
+      <wsdl:output message="tns:BACENSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CEPIM">
+      <wsdl:input message="tns:CEPIMSoapIn" />
+      <wsdl:output message="tns:CEPIMSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CEIS">
+      <wsdl:input message="tns:CEISSoapIn" />
+      <wsdl:output message="tns:CEISSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CNEP">
+      <wsdl:input message="tns:CNEPSoapIn" />
+      <wsdl:output message="tns:CNEPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PETI">
+      <wsdl:input message="tns:PETISoapIn" />
+      <wsdl:output message="tns:PETISoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AcordoLeniencia">
+      <wsdl:input message="tns:AcordoLenienciaSoapIn" />
+      <wsdl:output message="tns:AcordoLenienciaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CEAF">
+      <wsdl:input message="tns:CEAFSoapIn" />
+      <wsdl:output message="tns:CEAFSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DividaAtivaSP">
+      <wsdl:input message="tns:DividaAtivaSPSoapIn" />
+      <wsdl:output message="tns:DividaAtivaSPSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WsHttpGet">
+    <wsdl:operation name="GerarToken">
+      <wsdl:input message="tns:GerarTokenHttpGetIn" />
+      <wsdl:output message="tns:GerarTokenHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Localiza">
+      <wsdl:input message="tns:LocalizaHttpGetIn" />
+      <wsdl:output message="tns:LocalizaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CadastroSimplesPF">
+      <wsdl:input message="tns:CadastroSimplesPFHttpGetIn" />
+      <wsdl:output message="tns:CadastroSimplesPFHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CadastroSimplesPJ">
+      <wsdl:input message="tns:CadastroSimplesPJHttpGetIn" />
+      <wsdl:output message="tns:CadastroSimplesPJHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CadastroSintetico">
+      <wsdl:input message="tns:CadastroSinteticoHttpGetIn" />
+      <wsdl:output message="tns:CadastroSinteticoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CadastroCompletoPF">
+      <wsdl:input message="tns:CadastroCompletoPFHttpGetIn" />
+      <wsdl:output message="tns:CadastroCompletoPFHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CadastroCompletoPJ">
+      <wsdl:input message="tns:CadastroCompletoPJHttpGetIn" />
+      <wsdl:output message="tns:CadastroCompletoPJHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PessoasLigadas">
+      <wsdl:input message="tns:PessoasLigadasHttpGetIn" />
+      <wsdl:output message="tns:PessoasLigadasHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReceitaFederalPFOnline">
+      <wsdl:input message="tns:ReceitaFederalPFOnlineHttpGetIn" />
+      <wsdl:output message="tns:ReceitaFederalPFOnlineHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReceitaFederalPFBD">
+      <wsdl:input message="tns:ReceitaFederalPFBDHttpGetIn" />
+      <wsdl:output message="tns:ReceitaFederalPFBDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReceitaFederalPJOnline">
+      <wsdl:input message="tns:ReceitaFederalPJOnlineHttpGetIn" />
+      <wsdl:output message="tns:ReceitaFederalPJOnlineHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReceitaFederalPJBD">
+      <wsdl:input message="tns:ReceitaFederalPJBDHttpGetIn" />
+      <wsdl:output message="tns:ReceitaFederalPJBDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReceitaSintegraOnline">
+      <wsdl:input message="tns:ReceitaSintegraOnlineHttpGetIn" />
+      <wsdl:output message="tns:ReceitaSintegraOnlineHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SintegraOnline">
+      <wsdl:input message="tns:SintegraOnlineHttpGetIn" />
+      <wsdl:output message="tns:SintegraOnlineHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidacaoFiscal">
+      <wsdl:input message="tns:ValidacaoFiscalHttpGetIn" />
+      <wsdl:output message="tns:ValidacaoFiscalHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Veiculo">
+      <wsdl:input message="tns:VeiculoHttpGetIn" />
+      <wsdl:output message="tns:VeiculoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VeiculoSimples">
+      <wsdl:input message="tns:VeiculoSimplesHttpGetIn" />
+      <wsdl:output message="tns:VeiculoSimplesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObitoSimples">
+      <wsdl:input message="tns:ObitoSimplesHttpGetIn" />
+      <wsdl:output message="tns:ObitoSimplesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GroupPJ">
+      <wsdl:input message="tns:GroupPJHttpGetIn" />
+      <wsdl:output message="tns:GroupPJHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SimplesNacional">
+      <wsdl:input message="tns:SimplesNacionalHttpGetIn" />
+      <wsdl:output message="tns:SimplesNacionalHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Protesto">
+      <wsdl:input message="tns:ProtestoHttpGetIn" />
+      <wsdl:output message="tns:ProtestoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QSA">
+      <wsdl:input message="tns:QSAHttpGetIn" />
+      <wsdl:output message="tns:QSAHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscaCEP">
+      <wsdl:input message="tns:BuscaCEPHttpGetIn" />
+      <wsdl:output message="tns:BuscaCEPHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscaCepPorLogradouro">
+      <wsdl:input message="tns:BuscaCepPorLogradouroHttpGetIn" />
+      <wsdl:output message="tns:BuscaCepPorLogradouroHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RestricaoS">
+      <wsdl:input message="tns:RestricaoSHttpGetIn" />
+      <wsdl:output message="tns:RestricaoSHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ANP">
+      <wsdl:input message="tns:ANPHttpGetIn" />
+      <wsdl:output message="tns:ANPHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaFGTSEmpregador">
+      <wsdl:input message="tns:ConsultaFGTSEmpregadorHttpGetIn" />
+      <wsdl:output message="tns:ConsultaFGTSEmpregadorHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Score">
+      <wsdl:input message="tns:ScoreHttpGetIn" />
+      <wsdl:output message="tns:ScoreHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IRPF">
+      <wsdl:input message="tns:IRPFHttpGetIn" />
+      <wsdl:output message="tns:IRPFHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CARF">
+      <wsdl:input message="tns:CARFHttpGetIn" />
+      <wsdl:output message="tns:CARFHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaTSE">
+      <wsdl:input message="tns:ConsultaTSEHttpGetIn" />
+      <wsdl:output message="tns:ConsultaTSEHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CCF">
+      <wsdl:input message="tns:CCFHttpGetIn" />
+      <wsdl:output message="tns:CCFHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReceitaFederalComCaptcha">
+      <wsdl:input message="tns:ReceitaFederalComCaptchaHttpGetIn" />
+      <wsdl:output message="tns:ReceitaFederalComCaptchaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MandadoPrisao">
+      <wsdl:input message="tns:MandadoPrisaoHttpGetIn" />
+      <wsdl:output message="tns:MandadoPrisaoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PEP">
+      <wsdl:input message="tns:PEPHttpGetIn" />
+      <wsdl:output message="tns:PEPHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AcoesJudiciais">
+      <wsdl:input message="tns:AcoesJudiciaisHttpGetIn" />
+      <wsdl:output message="tns:AcoesJudiciaisHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SugereGEO">
+      <wsdl:input message="tns:SugereGEOHttpGetIn" />
+      <wsdl:output message="tns:SugereGEOHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="JusBrasilPF">
+      <wsdl:input message="tns:JusBrasilPFHttpGetIn" />
+      <wsdl:output message="tns:JusBrasilPFHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BACEN">
+      <wsdl:input message="tns:BACENHttpGetIn" />
+      <wsdl:output message="tns:BACENHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CEPIM">
+      <wsdl:input message="tns:CEPIMHttpGetIn" />
+      <wsdl:output message="tns:CEPIMHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CEIS">
+      <wsdl:input message="tns:CEISHttpGetIn" />
+      <wsdl:output message="tns:CEISHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CNEP">
+      <wsdl:input message="tns:CNEPHttpGetIn" />
+      <wsdl:output message="tns:CNEPHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PETI">
+      <wsdl:input message="tns:PETIHttpGetIn" />
+      <wsdl:output message="tns:PETIHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AcordoLeniencia">
+      <wsdl:input message="tns:AcordoLenienciaHttpGetIn" />
+      <wsdl:output message="tns:AcordoLenienciaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CEAF">
+      <wsdl:input message="tns:CEAFHttpGetIn" />
+      <wsdl:output message="tns:CEAFHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DividaAtivaSP">
+      <wsdl:input message="tns:DividaAtivaSPHttpGetIn" />
+      <wsdl:output message="tns:DividaAtivaSPHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WsHttpPost">
+    <wsdl:operation name="GerarToken">
+      <wsdl:input message="tns:GerarTokenHttpPostIn" />
+      <wsdl:output message="tns:GerarTokenHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Localiza">
+      <wsdl:input message="tns:LocalizaHttpPostIn" />
+      <wsdl:output message="tns:LocalizaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CadastroSimplesPF">
+      <wsdl:input message="tns:CadastroSimplesPFHttpPostIn" />
+      <wsdl:output message="tns:CadastroSimplesPFHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CadastroSimplesPJ">
+      <wsdl:input message="tns:CadastroSimplesPJHttpPostIn" />
+      <wsdl:output message="tns:CadastroSimplesPJHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CadastroSintetico">
+      <wsdl:input message="tns:CadastroSinteticoHttpPostIn" />
+      <wsdl:output message="tns:CadastroSinteticoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CadastroCompletoPF">
+      <wsdl:input message="tns:CadastroCompletoPFHttpPostIn" />
+      <wsdl:output message="tns:CadastroCompletoPFHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CadastroCompletoPJ">
+      <wsdl:input message="tns:CadastroCompletoPJHttpPostIn" />
+      <wsdl:output message="tns:CadastroCompletoPJHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PessoasLigadas">
+      <wsdl:input message="tns:PessoasLigadasHttpPostIn" />
+      <wsdl:output message="tns:PessoasLigadasHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReceitaFederalPFOnline">
+      <wsdl:input message="tns:ReceitaFederalPFOnlineHttpPostIn" />
+      <wsdl:output message="tns:ReceitaFederalPFOnlineHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReceitaFederalPFBD">
+      <wsdl:input message="tns:ReceitaFederalPFBDHttpPostIn" />
+      <wsdl:output message="tns:ReceitaFederalPFBDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReceitaFederalPJOnline">
+      <wsdl:input message="tns:ReceitaFederalPJOnlineHttpPostIn" />
+      <wsdl:output message="tns:ReceitaFederalPJOnlineHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReceitaFederalPJBD">
+      <wsdl:input message="tns:ReceitaFederalPJBDHttpPostIn" />
+      <wsdl:output message="tns:ReceitaFederalPJBDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReceitaSintegraOnline">
+      <wsdl:input message="tns:ReceitaSintegraOnlineHttpPostIn" />
+      <wsdl:output message="tns:ReceitaSintegraOnlineHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SintegraOnline">
+      <wsdl:input message="tns:SintegraOnlineHttpPostIn" />
+      <wsdl:output message="tns:SintegraOnlineHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidacaoFiscal">
+      <wsdl:input message="tns:ValidacaoFiscalHttpPostIn" />
+      <wsdl:output message="tns:ValidacaoFiscalHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Veiculo">
+      <wsdl:input message="tns:VeiculoHttpPostIn" />
+      <wsdl:output message="tns:VeiculoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VeiculoSimples">
+      <wsdl:input message="tns:VeiculoSimplesHttpPostIn" />
+      <wsdl:output message="tns:VeiculoSimplesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObitoSimples">
+      <wsdl:input message="tns:ObitoSimplesHttpPostIn" />
+      <wsdl:output message="tns:ObitoSimplesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GroupPJ">
+      <wsdl:input message="tns:GroupPJHttpPostIn" />
+      <wsdl:output message="tns:GroupPJHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SimplesNacional">
+      <wsdl:input message="tns:SimplesNacionalHttpPostIn" />
+      <wsdl:output message="tns:SimplesNacionalHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Protesto">
+      <wsdl:input message="tns:ProtestoHttpPostIn" />
+      <wsdl:output message="tns:ProtestoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QSA">
+      <wsdl:input message="tns:QSAHttpPostIn" />
+      <wsdl:output message="tns:QSAHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscaCEP">
+      <wsdl:input message="tns:BuscaCEPHttpPostIn" />
+      <wsdl:output message="tns:BuscaCEPHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscaCepPorLogradouro">
+      <wsdl:input message="tns:BuscaCepPorLogradouroHttpPostIn" />
+      <wsdl:output message="tns:BuscaCepPorLogradouroHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RestricaoS">
+      <wsdl:input message="tns:RestricaoSHttpPostIn" />
+      <wsdl:output message="tns:RestricaoSHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ANP">
+      <wsdl:input message="tns:ANPHttpPostIn" />
+      <wsdl:output message="tns:ANPHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaFGTSEmpregador">
+      <wsdl:input message="tns:ConsultaFGTSEmpregadorHttpPostIn" />
+      <wsdl:output message="tns:ConsultaFGTSEmpregadorHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Score">
+      <wsdl:input message="tns:ScoreHttpPostIn" />
+      <wsdl:output message="tns:ScoreHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IRPF">
+      <wsdl:input message="tns:IRPFHttpPostIn" />
+      <wsdl:output message="tns:IRPFHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CARF">
+      <wsdl:input message="tns:CARFHttpPostIn" />
+      <wsdl:output message="tns:CARFHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaTSE">
+      <wsdl:input message="tns:ConsultaTSEHttpPostIn" />
+      <wsdl:output message="tns:ConsultaTSEHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CCF">
+      <wsdl:input message="tns:CCFHttpPostIn" />
+      <wsdl:output message="tns:CCFHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReceitaFederalComCaptcha">
+      <wsdl:input message="tns:ReceitaFederalComCaptchaHttpPostIn" />
+      <wsdl:output message="tns:ReceitaFederalComCaptchaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MandadoPrisao">
+      <wsdl:input message="tns:MandadoPrisaoHttpPostIn" />
+      <wsdl:output message="tns:MandadoPrisaoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PEP">
+      <wsdl:input message="tns:PEPHttpPostIn" />
+      <wsdl:output message="tns:PEPHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AcoesJudiciais">
+      <wsdl:input message="tns:AcoesJudiciaisHttpPostIn" />
+      <wsdl:output message="tns:AcoesJudiciaisHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SugereGEO">
+      <wsdl:input message="tns:SugereGEOHttpPostIn" />
+      <wsdl:output message="tns:SugereGEOHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="JusBrasilPF">
+      <wsdl:input message="tns:JusBrasilPFHttpPostIn" />
+      <wsdl:output message="tns:JusBrasilPFHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BACEN">
+      <wsdl:input message="tns:BACENHttpPostIn" />
+      <wsdl:output message="tns:BACENHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CEPIM">
+      <wsdl:input message="tns:CEPIMHttpPostIn" />
+      <wsdl:output message="tns:CEPIMHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CEIS">
+      <wsdl:input message="tns:CEISHttpPostIn" />
+      <wsdl:output message="tns:CEISHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CNEP">
+      <wsdl:input message="tns:CNEPHttpPostIn" />
+      <wsdl:output message="tns:CNEPHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PETI">
+      <wsdl:input message="tns:PETIHttpPostIn" />
+      <wsdl:output message="tns:PETIHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AcordoLeniencia">
+      <wsdl:input message="tns:AcordoLenienciaHttpPostIn" />
+      <wsdl:output message="tns:AcordoLenienciaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CEAF">
+      <wsdl:input message="tns:CEAFHttpPostIn" />
+      <wsdl:output message="tns:CEAFHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DividaAtivaSP">
+      <wsdl:input message="tns:DividaAtivaSPHttpPostIn" />
+      <wsdl:output message="tns:DividaAtivaSPHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WsSoap" type="tns:WsSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GerarToken">
+      <soap:operation soapAction="http://tempuri.org/GerarToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Localiza">
+      <soap:operation soapAction="http://tempuri.org/Localiza" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CadastroSimplesPF">
+      <soap:operation soapAction="http://tempuri.org/CadastroSimplesPF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CadastroSimplesPJ">
+      <soap:operation soapAction="http://tempuri.org/CadastroSimplesPJ" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CadastroSintetico">
+      <soap:operation soapAction="http://tempuri.org/CadastroSintetico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CadastroCompletoPF">
+      <soap:operation soapAction="http://tempuri.org/CadastroCompletoPF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CadastroCompletoPJ">
+      <soap:operation soapAction="http://tempuri.org/CadastroCompletoPJ" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PessoasLigadas">
+      <soap:operation soapAction="http://tempuri.org/PessoasLigadas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceitaFederalPFOnline">
+      <soap:operation soapAction="http://tempuri.org/ReceitaFederalPFOnline" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceitaFederalPFBD">
+      <soap:operation soapAction="http://tempuri.org/ReceitaFederalPFBD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceitaFederalPJOnline">
+      <soap:operation soapAction="http://tempuri.org/ReceitaFederalPJOnline" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceitaFederalPJBD">
+      <soap:operation soapAction="http://tempuri.org/ReceitaFederalPJBD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceitaSintegraOnline">
+      <soap:operation soapAction="http://tempuri.org/ReceitaSintegraOnline" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SintegraOnline">
+      <soap:operation soapAction="http://tempuri.org/SintegraOnline" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidacaoFiscal">
+      <soap:operation soapAction="http://tempuri.org/ValidacaoFiscal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Veiculo">
+      <soap:operation soapAction="http://tempuri.org/Veiculo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VeiculoSimples">
+      <soap:operation soapAction="http://tempuri.org/VeiculoSimples" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObitoSimples">
+      <soap:operation soapAction="http://tempuri.org/ObitoSimples" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GroupPJ">
+      <soap:operation soapAction="http://tempuri.org/GroupPJ" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SimplesNacional">
+      <soap:operation soapAction="http://tempuri.org/SimplesNacional" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Protesto">
+      <soap:operation soapAction="http://tempuri.org/Protesto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QSA">
+      <soap:operation soapAction="http://tempuri.org/QSA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscaCEP">
+      <soap:operation soapAction="http://tempuri.org/BuscaCEP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscaCepPorLogradouro">
+      <soap:operation soapAction="http://tempuri.org/BuscaCepPorLogradouro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RestricaoS">
+      <soap:operation soapAction="http://tempuri.org/RestricaoS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Relatorio">
+      <soap:operation soapAction="http://tempuri.org/Relatorio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ANP">
+      <soap:operation soapAction="http://tempuri.org/ANP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaFGTSEmpregador">
+      <soap:operation soapAction="http://tempuri.org/ConsultaFGTSEmpregador" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Score">
+      <soap:operation soapAction="http://tempuri.org/Score" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IRPF">
+      <soap:operation soapAction="http://tempuri.org/IRPF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CARF">
+      <soap:operation soapAction="http://tempuri.org/CARF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaTSE">
+      <soap:operation soapAction="http://tempuri.org/ConsultaTSE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CCF">
+      <soap:operation soapAction="http://tempuri.org/CCF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceitaFederalComCaptcha">
+      <soap:operation soapAction="http://tempuri.org/ReceitaFederalComCaptcha" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MandadoPrisao">
+      <soap:operation soapAction="http://tempuri.org/MandadoPrisao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PEP">
+      <soap:operation soapAction="http://tempuri.org/PEP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AcoesJudiciais">
+      <soap:operation soapAction="http://tempuri.org/AcoesJudiciais" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SugereGEO">
+      <soap:operation soapAction="http://tempuri.org/SugereGEO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JusBrasilPF">
+      <soap:operation soapAction="http://tempuri.org/JusBrasilPF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BACEN">
+      <soap:operation soapAction="http://tempuri.org/BACEN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CEPIM">
+      <soap:operation soapAction="http://tempuri.org/CEPIM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CEIS">
+      <soap:operation soapAction="http://tempuri.org/CEIS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CNEP">
+      <soap:operation soapAction="http://tempuri.org/CNEP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PETI">
+      <soap:operation soapAction="http://tempuri.org/PETI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AcordoLeniencia">
+      <soap:operation soapAction="http://tempuri.org/AcordoLeniencia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CEAF">
+      <soap:operation soapAction="http://tempuri.org/CEAF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DividaAtivaSP">
+      <soap:operation soapAction="http://tempuri.org/DividaAtivaSP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WsSoap12" type="tns:WsSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GerarToken">
+      <soap12:operation soapAction="http://tempuri.org/GerarToken" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Localiza">
+      <soap12:operation soapAction="http://tempuri.org/Localiza" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CadastroSimplesPF">
+      <soap12:operation soapAction="http://tempuri.org/CadastroSimplesPF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CadastroSimplesPJ">
+      <soap12:operation soapAction="http://tempuri.org/CadastroSimplesPJ" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CadastroSintetico">
+      <soap12:operation soapAction="http://tempuri.org/CadastroSintetico" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CadastroCompletoPF">
+      <soap12:operation soapAction="http://tempuri.org/CadastroCompletoPF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CadastroCompletoPJ">
+      <soap12:operation soapAction="http://tempuri.org/CadastroCompletoPJ" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PessoasLigadas">
+      <soap12:operation soapAction="http://tempuri.org/PessoasLigadas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceitaFederalPFOnline">
+      <soap12:operation soapAction="http://tempuri.org/ReceitaFederalPFOnline" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceitaFederalPFBD">
+      <soap12:operation soapAction="http://tempuri.org/ReceitaFederalPFBD" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceitaFederalPJOnline">
+      <soap12:operation soapAction="http://tempuri.org/ReceitaFederalPJOnline" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceitaFederalPJBD">
+      <soap12:operation soapAction="http://tempuri.org/ReceitaFederalPJBD" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceitaSintegraOnline">
+      <soap12:operation soapAction="http://tempuri.org/ReceitaSintegraOnline" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SintegraOnline">
+      <soap12:operation soapAction="http://tempuri.org/SintegraOnline" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidacaoFiscal">
+      <soap12:operation soapAction="http://tempuri.org/ValidacaoFiscal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Veiculo">
+      <soap12:operation soapAction="http://tempuri.org/Veiculo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VeiculoSimples">
+      <soap12:operation soapAction="http://tempuri.org/VeiculoSimples" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObitoSimples">
+      <soap12:operation soapAction="http://tempuri.org/ObitoSimples" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GroupPJ">
+      <soap12:operation soapAction="http://tempuri.org/GroupPJ" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SimplesNacional">
+      <soap12:operation soapAction="http://tempuri.org/SimplesNacional" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Protesto">
+      <soap12:operation soapAction="http://tempuri.org/Protesto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QSA">
+      <soap12:operation soapAction="http://tempuri.org/QSA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscaCEP">
+      <soap12:operation soapAction="http://tempuri.org/BuscaCEP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscaCepPorLogradouro">
+      <soap12:operation soapAction="http://tempuri.org/BuscaCepPorLogradouro" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RestricaoS">
+      <soap12:operation soapAction="http://tempuri.org/RestricaoS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Relatorio">
+      <soap12:operation soapAction="http://tempuri.org/Relatorio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ANP">
+      <soap12:operation soapAction="http://tempuri.org/ANP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaFGTSEmpregador">
+      <soap12:operation soapAction="http://tempuri.org/ConsultaFGTSEmpregador" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Score">
+      <soap12:operation soapAction="http://tempuri.org/Score" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IRPF">
+      <soap12:operation soapAction="http://tempuri.org/IRPF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CARF">
+      <soap12:operation soapAction="http://tempuri.org/CARF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaTSE">
+      <soap12:operation soapAction="http://tempuri.org/ConsultaTSE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CCF">
+      <soap12:operation soapAction="http://tempuri.org/CCF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceitaFederalComCaptcha">
+      <soap12:operation soapAction="http://tempuri.org/ReceitaFederalComCaptcha" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MandadoPrisao">
+      <soap12:operation soapAction="http://tempuri.org/MandadoPrisao" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PEP">
+      <soap12:operation soapAction="http://tempuri.org/PEP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AcoesJudiciais">
+      <soap12:operation soapAction="http://tempuri.org/AcoesJudiciais" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SugereGEO">
+      <soap12:operation soapAction="http://tempuri.org/SugereGEO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JusBrasilPF">
+      <soap12:operation soapAction="http://tempuri.org/JusBrasilPF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BACEN">
+      <soap12:operation soapAction="http://tempuri.org/BACEN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CEPIM">
+      <soap12:operation soapAction="http://tempuri.org/CEPIM" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CEIS">
+      <soap12:operation soapAction="http://tempuri.org/CEIS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CNEP">
+      <soap12:operation soapAction="http://tempuri.org/CNEP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PETI">
+      <soap12:operation soapAction="http://tempuri.org/PETI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AcordoLeniencia">
+      <soap12:operation soapAction="http://tempuri.org/AcordoLeniencia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CEAF">
+      <soap12:operation soapAction="http://tempuri.org/CEAF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DividaAtivaSP">
+      <soap12:operation soapAction="http://tempuri.org/DividaAtivaSP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WsHttpGet" type="tns:WsHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GerarToken">
+      <http:operation location="/GerarToken" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Localiza">
+      <http:operation location="/Localiza" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CadastroSimplesPF">
+      <http:operation location="/CadastroSimplesPF" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CadastroSimplesPJ">
+      <http:operation location="/CadastroSimplesPJ" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CadastroSintetico">
+      <http:operation location="/CadastroSintetico" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CadastroCompletoPF">
+      <http:operation location="/CadastroCompletoPF" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CadastroCompletoPJ">
+      <http:operation location="/CadastroCompletoPJ" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PessoasLigadas">
+      <http:operation location="/PessoasLigadas" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceitaFederalPFOnline">
+      <http:operation location="/ReceitaFederalPFOnline" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceitaFederalPFBD">
+      <http:operation location="/ReceitaFederalPFBD" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceitaFederalPJOnline">
+      <http:operation location="/ReceitaFederalPJOnline" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceitaFederalPJBD">
+      <http:operation location="/ReceitaFederalPJBD" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceitaSintegraOnline">
+      <http:operation location="/ReceitaSintegraOnline" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SintegraOnline">
+      <http:operation location="/SintegraOnline" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidacaoFiscal">
+      <http:operation location="/ValidacaoFiscal" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Veiculo">
+      <http:operation location="/Veiculo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VeiculoSimples">
+      <http:operation location="/VeiculoSimples" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObitoSimples">
+      <http:operation location="/ObitoSimples" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GroupPJ">
+      <http:operation location="/GroupPJ" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SimplesNacional">
+      <http:operation location="/SimplesNacional" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Protesto">
+      <http:operation location="/Protesto" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QSA">
+      <http:operation location="/QSA" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscaCEP">
+      <http:operation location="/BuscaCEP" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscaCepPorLogradouro">
+      <http:operation location="/BuscaCepPorLogradouro" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RestricaoS">
+      <http:operation location="/RestricaoS" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ANP">
+      <http:operation location="/ANP" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaFGTSEmpregador">
+      <http:operation location="/ConsultaFGTSEmpregador" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Score">
+      <http:operation location="/Score" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IRPF">
+      <http:operation location="/IRPF" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CARF">
+      <http:operation location="/CARF" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaTSE">
+      <http:operation location="/ConsultaTSE" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CCF">
+      <http:operation location="/CCF" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceitaFederalComCaptcha">
+      <http:operation location="/ReceitaFederalComCaptcha" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MandadoPrisao">
+      <http:operation location="/MandadoPrisao" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PEP">
+      <http:operation location="/PEP" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AcoesJudiciais">
+      <http:operation location="/AcoesJudiciais" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SugereGEO">
+      <http:operation location="/SugereGEO" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JusBrasilPF">
+      <http:operation location="/JusBrasilPF" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BACEN">
+      <http:operation location="/BACEN" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CEPIM">
+      <http:operation location="/CEPIM" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CEIS">
+      <http:operation location="/CEIS" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CNEP">
+      <http:operation location="/CNEP" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PETI">
+      <http:operation location="/PETI" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AcordoLeniencia">
+      <http:operation location="/AcordoLeniencia" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CEAF">
+      <http:operation location="/CEAF" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DividaAtivaSP">
+      <http:operation location="/DividaAtivaSP" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WsHttpPost" type="tns:WsHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GerarToken">
+      <http:operation location="/GerarToken" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Localiza">
+      <http:operation location="/Localiza" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CadastroSimplesPF">
+      <http:operation location="/CadastroSimplesPF" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CadastroSimplesPJ">
+      <http:operation location="/CadastroSimplesPJ" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CadastroSintetico">
+      <http:operation location="/CadastroSintetico" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CadastroCompletoPF">
+      <http:operation location="/CadastroCompletoPF" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CadastroCompletoPJ">
+      <http:operation location="/CadastroCompletoPJ" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PessoasLigadas">
+      <http:operation location="/PessoasLigadas" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceitaFederalPFOnline">
+      <http:operation location="/ReceitaFederalPFOnline" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceitaFederalPFBD">
+      <http:operation location="/ReceitaFederalPFBD" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceitaFederalPJOnline">
+      <http:operation location="/ReceitaFederalPJOnline" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceitaFederalPJBD">
+      <http:operation location="/ReceitaFederalPJBD" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceitaSintegraOnline">
+      <http:operation location="/ReceitaSintegraOnline" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SintegraOnline">
+      <http:operation location="/SintegraOnline" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidacaoFiscal">
+      <http:operation location="/ValidacaoFiscal" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Veiculo">
+      <http:operation location="/Veiculo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VeiculoSimples">
+      <http:operation location="/VeiculoSimples" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObitoSimples">
+      <http:operation location="/ObitoSimples" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GroupPJ">
+      <http:operation location="/GroupPJ" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SimplesNacional">
+      <http:operation location="/SimplesNacional" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Protesto">
+      <http:operation location="/Protesto" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QSA">
+      <http:operation location="/QSA" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscaCEP">
+      <http:operation location="/BuscaCEP" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscaCepPorLogradouro">
+      <http:operation location="/BuscaCepPorLogradouro" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RestricaoS">
+      <http:operation location="/RestricaoS" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ANP">
+      <http:operation location="/ANP" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaFGTSEmpregador">
+      <http:operation location="/ConsultaFGTSEmpregador" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Score">
+      <http:operation location="/Score" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IRPF">
+      <http:operation location="/IRPF" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CARF">
+      <http:operation location="/CARF" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaTSE">
+      <http:operation location="/ConsultaTSE" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CCF">
+      <http:operation location="/CCF" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceitaFederalComCaptcha">
+      <http:operation location="/ReceitaFederalComCaptcha" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MandadoPrisao">
+      <http:operation location="/MandadoPrisao" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PEP">
+      <http:operation location="/PEP" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AcoesJudiciais">
+      <http:operation location="/AcoesJudiciais" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SugereGEO">
+      <http:operation location="/SugereGEO" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JusBrasilPF">
+      <http:operation location="/JusBrasilPF" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BACEN">
+      <http:operation location="/BACEN" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CEPIM">
+      <http:operation location="/CEPIM" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CEIS">
+      <http:operation location="/CEIS" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CNEP">
+      <http:operation location="/CNEP" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PETI">
+      <http:operation location="/PETI" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AcordoLeniencia">
+      <http:operation location="/AcordoLeniencia" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CEAF">
+      <http:operation location="/CEAF" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DividaAtivaSP">
+      <http:operation location="/DividaAtivaSP" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Ws">
+    <wsdl:port name="WsSoap" binding="tns:WsSoap">
+      <soap:address location="https://sistema.valideinfoweb.com.br/ws.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WsSoap12" binding="tns:WsSoap12">
+      <soap12:address location="https://sistema.valideinfoweb.com.br/ws.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WsHttpGet" binding="tns:WsHttpGet">
+      <http:address location="https://sistema.valideinfoweb.com.br/ws.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WsHttpPost" binding="tns:WsHttpPost">
+      <http:address location="https://sistema.valideinfoweb.com.br/ws.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

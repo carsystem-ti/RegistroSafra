@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2300AB66-5C91-47C7-A5A1-09DD0F8A3212}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Frame.ServiceLayer</RootNamespace>
+    <AssemblyName>Frame.ServiceLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Sap.Data.Hana.v4.5, Version=1.0.9.0, Culture=neutral, PublicKeyToken=0326b8ea63db4bc4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Sap.Data.Hana.v4.5.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\CadastroAtividadeControllers.cs" />
+    <Compile Include="Controllers\CadastroContasReceber.cs" />
+    <Compile Include="Controllers\CadastroOportunidadeControllers.cs" />
+    <Compile Include="Controllers\CadastroPedidoControllers.cs" />
+    <Compile Include="Controllers\CadastroPNControllers.cs" />
+    <Compile Include="Controllers\CadastroProjetoControllers.cs" />
+    <Compile Include="Modelos\Atividade\Locais.cs" />
+    <Compile Include="Modelos\Atividade\Usuarios.cs" />
+    <Compile Include="Modelos\Atividade\CadastroAtividade.cs" />
+    <Compile Include="Modelos\Atividade\Assunto.cs" />
+    <Compile Include="Modelos\Atividade\Tipos.cs" />
+    <Compile Include="Modelos\Contas Receber\ContasReceber.cs" />
+    <Compile Include="Modelos\Oportunidade\CadastroOportunidade.cs" />
+    <Compile Include="Modelos\Oportunidade\Titulares.cs" />
+    <Compile Include="Modelos\Oportunidade\Porcentagem.cs" />
+    <Compile Include="Modelos\Oportunidade\Etapas.cs" />
+    <Compile Include="Modelos\Oportunidade\Descricoes.cs" />
+    <Compile Include="Modelos\Oportunidade\Nivelinteresses.cs" />
+    <Compile Include="Modelos\Pedido\CadastroJobs.cs" />
+    <Compile Include="Modelos\Pedido\CadastroPedido.cs" />
+    <Compile Include="Modelos\PN\CadastroPN.cs" />
+    <Compile Include="Modelos\PN\Filiais.cs" />
+    <Compile Include="Modelos\PN\Utilizacoes.cs" />
+    <Compile Include="Modelos\PN\Projeto.cs" />
+    <Compile Include="Modelos\PN\Grupo.cs" />
+    <Compile Include="Modelos\PN\Serie.cs" />
+    <Compile Include="Modelos\PN\Itens.cs" />
+    <Compile Include="Modelos\PN\Vendedor.cs" />
+    <Compile Include="Modelos\PN\UsoPrincipal.cs" />
+    <Compile Include="Modelos\PN\Pais.cs" />
+    <Compile Include="Modelos\PN\Municipio.cs" />
+    <Compile Include="Modelos\PN\Estado.cs" />
+    <Compile Include="Modelos\Pre LCM\PreLCM.cs" />
+    <Compile Include="Modelos\Projetos Gerenciais\ProjetosGerenciais.cs" />
+    <Compile Include="Modelos\Projeto\CadastroProjetos.cs" />
+    <Compile Include="Modelos\Retorno.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceLayer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Consulta\Atividade\ConsultaAnteriorAtividade.sql" />
+    <Content Include="Consulta\Atividade\ConsultaAssuntoAtividade.sql" />
+    <Content Include="Consulta\Atividade\ConsultaUsuarioAtividade.sql" />
+    <Content Include="Consulta\Atividade\ConsultaLocalAtividade.sql" />
+    <Content Include="Consulta\Atividade\ConsultaAtividade.sql" />
+    <Content Include="Consulta\Atividade\ConsultaTipoAtividade.sql" />
+    <Content Include="Consulta\Atividade\ConsultaPrimeiroAtividade.sql" />
+    <Content Include="Consulta\Atividade\ConsultaProximoAtividade.sql" />
+    <Content Include="Consulta\Atividade\ConsultaUltimoAtividade.sql" />
+    <Content Include="Consulta\Contas Receber\ConsultaContasReceber.sql" />
+    <Content Include="Consulta\Oportunidade\ConsultaAnteriorOportunidade.sql" />
+    <Content Include="Consulta\Oportunidade\ConsultaTitular.sql" />
+    <Content Include="Consulta\Oportunidade\ConsultaPorcentagem.sql" />
+    <Content Include="Consulta\Oportunidade\ConsultaEtapa.sql" />
+    <Content Include="Consulta\Oportunidade\ConsultaDescricao.sql" />
+    <Content Include="Consulta\Oportunidade\ConsultaOportunidadee.sql" />
+    <Content Include="Consulta\Oportunidade\ConsultaPrimeiroOportunidade.sql" />
+    <Content Include="Consulta\Oportunidade\ConsultaNivelInteresse.sql" />
+    <Content Include="Consulta\Oportunidade\ConsultaProximoOportunidade.sql" />
+    <Content Include="Consulta\Oportunidade\ConsultaUltimoOportunidade.sql" />
+    <Content Include="Consulta\Pedido\ConsultaAnteriorPedido.sql" />
+    <Content Include="Consulta\Pedido\ConsultaUtilizacaoPedido.sql" />
+    <Content Include="Consulta\Pedido\ConsultaFilialPedido.sql" />
+    <Content Include="Consulta\Pedido\ConsultaItensPedido.sql" />
+    <Content Include="Consulta\Pedido\ConsultaPedido.sql" />
+    <Content Include="Consulta\Pedido\ConsultaPrimeiroPedido.sql" />
+    <Content Include="Consulta\Pedido\ConsultaProximoPedido.sql" />
+    <Content Include="Consulta\Pedido\ConsultaUltimoPedido.sql" />
+    <Content Include="Consulta\PN\ConsultaPaisPN.sql" />
+    <Content Include="Consulta\PN\ConsultaMunicipioPN.sql" />
+    <Content Include="Consulta\PN\ConsultaEstadoPN.sql" />
+    <Content Include="Consulta\PN\ConsultaPrimeiroPN.sql" />
+    <Content Include="Consulta\PN\ConsultaPN.sql" />
+    <Content Include="Consulta\PN\ConsultaProjetoPN.sql" />
+    <Content Include="Consulta\PN\ConsultaGrupoPN.sql" />
+    <Content Include="Consulta\PN\ConsultaSeriePN.sql" />
+    <Content Include="Consulta\PN\ConsultaCardCodePN.sql" />
+    <Content Include="Consulta\PN\ConsultaVendedorPN.sql" />
+    <Content Include="Consulta\PN\ConsultaUsoPrincipalPN.sql" />
+    <Content Include="Consulta\PN\ConsultaUltimoPN.sql" />
+    <Content Include="Consulta\PN\ConsultaProximoPN.sql" />
+    <Content Include="Consulta\PN\ConsultaAnteriorPN.sql" />
+    <Content Include="Consulta\Pre LCM\ConsultaGrupoItem.sql" />
+    <Content Include="DLL\Sap.Data.Hana.v4.5.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
